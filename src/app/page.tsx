@@ -1,11 +1,16 @@
+import Handshake from '/public/images/handshake.webp';
 import QuestionBox from '@/app/ui/question-box';
 import RedirectButton from '@/app/ui/redirect-button';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <div className='flex flex-col items-center flex-grow mt-72'>
-        <h1 className='title mb-8'><span className='font-normal'>Detta är</span> SponsorDirekt <span className='sponsor-blue'>UF</span></h1>
+      <div className='fixed z-0 opacity-10 blur'>
+        <Image src={Handshake} alt={'handshake'} width={16384}></Image>
+      </div>
+      <div className='flex flex-col items-center flex-grow mt-56'>
+        <h1 className='title mb-8'><span className='font-normal'>Detta är</span> SponsorDirekt UF</h1>
         <div className='grid grid-cols-3 gap-12 mb-12' id="textbox-grid">
           <div className='gridbox p-6 rounded-2xl bg-blue-100 drop-shadow-lg flex flex-col justify-between'>
             <div className='w-100 flex justify-center items-center'>
