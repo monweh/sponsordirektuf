@@ -1,44 +1,20 @@
 import Handshake from '/public/images/handshake.webp';
-import QuestionBox from '@/app/ui/question-box';
-import RedirectButton from '@/app/ui/redirect-button';
+import InfoBox from '@/app/ui/info-box';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <div className='fixed z-0 opacity-10 blur'>
-        <Image src={Handshake} alt={'handshake'} width={16384}></Image>
-      </div>
+      <div className='fixed z-0 opacity-10 blur'><Image src={Handshake} alt={'Bakgrundsbild som föreställer en handskakning'} width={16384}></Image></div>
+
       <div className='flex flex-col items-center flex-grow mt-56'>
         <h1 className='title mb-8'><span className='font-normal'>Detta är</span> SponsorDirekt UF</h1>
-        <div className='grid grid-cols-3 gap-12 mb-12' id="textbox-grid">
-          <div className='gridbox p-6 rounded-2xl bg-blue-100 drop-shadow-lg flex flex-col justify-between'>
-            <div className='w-100 flex justify-center items-center'>
-              <QuestionBox text='Vad gör SponsorDirekt UF?' />
-            </div>
-            <p>SponsorDirekt UF:s huvudfokus är att underlätta och effektivisera processen för parter att hitta rätt samarbeten, vilket skapar mervärde för alla. </p>
-            <div className='w-100 flex justify-center items-center'>
-            <RedirectButton text='Läs mer om oss!' href='/om-oss'/>
-            </div>
-          </div>
-          <div className='gridbox p-6 rounded-2xl bg-blue-100 drop-shadow-lg flex flex-col justify-between'>
-            <div className='w-100 flex justify-center items-center'>
-            <QuestionBox text='Hur söker jag sponsor?' />
-            </div>
-            <p>Om du behöver sponsorer för din verksamhet, fyll i vårt formulär och bli en del av ett nätverk av potentiella sponsorer – det tar bara ~5 minuter! Vi hjälper dig att hitta en bra matchning snabbt och enkelt.</p>
-            <div className='w-100 flex justify-center items-center'>
-            <RedirectButton text='Sök sponsor' href='/ansokan/sok-sponsor'/>
-            </div>
-          </div>
-          <div className='gridbox p-6 rounded-2xl bg-blue-100 drop-shadow-lg flex flex-col justify-between'>
-            <div className='w-100 flex justify-center items-center'>
-            <QuestionBox text='Hur blir jag en sponsor?' />
-            </div>
-            <p>Vill ditt företag nå nya målgrupper? Fyll då i vårt formulär och anslut dig till vårt nätverk av verksamheter som söker sponsorer! Det tar bara ~5 minuter att komma igång och vi hjälper dig hitta rätt samarbeten för ditt varumärke.</p>
-            <div className='w-100 flex justify-center items-center'>
-            <RedirectButton text='Bli sponsor' href='/ansokan/bli-sponsor'/>
-            </div>
-          </div>
+        <div className='textbox-grid grid grid-cols-3 gap-12 mb-12'>
+          <InfoBox question='Vad gör SponsorDirekt UF?' text='SponsorDirekt UF:s fokus är att underlätta och effektivisera processen för verksamheter och sponsorer att hitta rätt samarbeten, och därmed skapa mervärde för alla parter inblandade.' buttonText='Läs mer om oss!' buttonHref='/om-oss'/>
+
+          <InfoBox question='Hur söker jag sponsor?' text='Om du behöver sponsorer för din verksamhet, fyll i vårt formulär och bli en del av ett nätverk av potentiella sponsorer – det tar bara ~5 minuter! Vi hjälper dig att hitta en bra matchning snabbt och enkelt.' buttonText='Sök sponsor' buttonHref='/ansokan/sok-sponsor'/>
+          
+          <InfoBox question='Hur blir jag en sponsor?' text='Vill ditt företag nå nya målgrupper? Fyll då i vårt formulär och anslut dig till vårt nätverk av verksamheter som söker sponsorer! Det tar bara ~5 minuter att komma igång och vi hjälper dig hitta rätt samarbeten för ditt varumärke.' buttonText='Bli sponsor' buttonHref='/ansokan/bli-sponsor'/>
         </div>
       </div>
     </div>
