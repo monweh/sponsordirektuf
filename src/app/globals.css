@@ -3,19 +3,122 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: rgb(222, 239, 255);
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
+}
+ul {
+  font-size: 1.2rem;
+  list-style-type: disc;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #171717;
+}
+
+.sponsor-blue {
+  color: #2884e8;
+}
+
+.header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  padding: 15px 40px 15px 40px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.footer {
+  background: #ffffff;
+}
+
+#textbox-grid {
+  width: 80rem;
+}
+
+.gridbox {
+  transition: all 150ms ease-in-out;
+}
+.gridbox:hover {
+  transform: translateY(-5px);
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.altButton {
+  background: #303030;
+  color: white;
+}
+.altButton:hover {
+  background: #606060;
+  border-radius: 30px;
+}
+
+.question-box {
+  color: #171717;
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  text-wrap: nowrap;
+  gap: 20px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.text-block {
+  width: 72rem;
 }
