@@ -6,8 +6,8 @@ import "@fillout/react/style.css"
 export default function Page() {
     return (
         <div>
-            <div className="h-20"></div>
-            <div className="w-100 h-fit">
+            <div className="fillout-form-space"></div>
+            <div className="fillout-form md:w-100 h-fit">
                 <FilloutStandardEmbed filloutId="e4FNFQKV71us" dynamicResize/>
             </div>
         </div>

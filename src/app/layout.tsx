@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sora.className} antialiased flex flex-col md:h-screen items-center`}>
         <Header />
-        <main className="flex-grow">
+        <main className="header-background flex-grow">
           {children}
         </main>
       <Footer />
