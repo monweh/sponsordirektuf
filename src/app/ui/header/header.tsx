@@ -4,10 +4,9 @@ import Image from 'next/image';
 import logo from '/public/images/logo.svg';
 import homeIcon from '/public/images/home-icon.svg';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import MobileNav from '@/app/ui/header/mobile-nav';
 
 export default function Header() {
-    const router = useRouter();
 
     return (
         <header className="header">
@@ -15,17 +14,28 @@ export default function Header() {
                 <div>
                     <Image 
                     src={logo} 
-                    width={250}
+                    width={225}
                     height={100}
                     alt="SponsorDirekt UF" 
                     className='translate-y-0.5'
                     />
                 </div>
             </Link>
-          <nav>
+            {/* <button className='button md:hidden p-1' onClick={toggleMobileNav} aria-label='Aktivera mobilnavigeringsmenyn'> 
+              <Image
+                src={hamburger} 
+                width={30}
+                height={30}
+                alt="Hamburger Icon"
+              />
+            </button>  */}
+
+            <MobileNav />
+
+          <nav className='hidden md:flex'>
             <Link href="/" passHref>
               <button 
-                className='button flex gap-3 items-center justify-center'
+                className='hidden button md:flex gap-3 items-center justify-center'
               >
                 <Image 
                   src={homeIcon} 
@@ -37,22 +47,17 @@ export default function Header() {
               </button>
             </Link>
             <Link href="/om-oss" passHref>
-                <button className='button'>Om oss</button>
+                <button className='button hidden md:flex'>Om oss</button>
             </Link>
             <Link href="/kontakt" passHref>
-                <button className='button'>Kontakta oss</button>
+                <button className='button hidden md:flex'>Kontakta oss</button>
             </Link>
             <div className='w-5'></div>
-            {/* <Link href='/ansokan/sok-sponsor' passHref> */}
-                <button className='altButton' type='button' onClick={() => {
-                    router.prefetch('/ansokan/sok-sponsor');
-                    router.push('/ansokan/sok-sponsor');
-                    }
-                }>
-                    Sök sponsor</button>
-            {/* </Link> */}
+            <Link href='/ansokan/sok-sponsor' passHref>
+                <button className='altButton hidden md:flex' type='button'>Sök sponsor</button>
+            </Link>
             <Link href='/ansokan/bli-sponsor' passHref>
-                <button className='altButton'>Bli sponsor</button>
+                <button className='altButton hidden md:flex'>Bli sponsor</button>
             </Link>
           </nav>
         </header>
