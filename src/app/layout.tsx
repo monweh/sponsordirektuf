@@ -4,7 +4,7 @@ import './globals.css';
 import Header from '@/app/ui/header/header';
 import Footer from './ui/footer/footer';
 
-const sora = Sora({
+const sora = Sora({   
   weight: ['400', '700'],
   subsets: ['latin'],
 });
