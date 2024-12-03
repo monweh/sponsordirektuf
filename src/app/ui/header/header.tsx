@@ -32,7 +32,7 @@ export default function Header() {
 
             <MobileNav />
 
-          <nav className='hidden md:flex'>
+          <nav className='hidden md:flex items-center justify-center'>
             <Link href="/" passHref>
               <button 
                 className='hidden button md:flex gap-3 items-center justify-center'
