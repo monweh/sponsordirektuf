@@ -4,7 +4,7 @@
 
 const nextConfig = {
   // output: 'export',
-  // basePath: '/klass/webb2_2425/PhilemonWehinger/out',
+  // basePath: '/out',
  
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,
