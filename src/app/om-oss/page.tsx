@@ -28,7 +28,7 @@ export default function OmOss() {
                             <li><b>Effektiv matchning</b> med sponsringsmöjligheter som passar era mål.</li>
                             <li><b>Enkel och tidsbesparande process</b> – vi tar hand om det mesta.</li>
                             <li><b>Riskfritt och hög flexibilitet</b> med tydliga avtal och transparens.</li>
-                            <li><b>Låg avgift</b> – endast 8% av det slutgiltiga sponsorbeloppet.</li>
+                            <li><b>Låg avgift</b> – endast runt 8% av det slutgiltiga sponsorbeloppet.</li>
                         </ul>
                     <br />
                     <h1 className='title sponsor-blue mb-2 mt-12'>Vilka är vi?</h1>
